@@ -1,0 +1,6 @@
+:root{font-family:system-ui,Arial,sans-serif;color:var(--text);background:var(--bg);--bg:#F4F7FB;--surface:#FFFFFF;--navy:#142B49;--teal:#0E857A;--teal-light:#E0F4F1;--text:#26374D;--muted:#64758C;--muted-strong:#52657D;--border:#DDE5EF;--nav-text:#C6D8E6;--nav-active:#294463;--table-head:#E8F1F5;--row-bg:#F3F7F9;--paid:#087269;--pending:#855600;--refunded:#375A98;--failed:#A83742;--radius:14px;--control-radius:10px;--space-1:8px;--space-2:12px;--space-3:16px;--space-4:24px;--space-5:32px;--focus:#087269}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:3px}html{scroll-padding-top:16px}button:disabled{opacity:.55}
+
+/* Let the browser animate section links, including history navigation. */
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

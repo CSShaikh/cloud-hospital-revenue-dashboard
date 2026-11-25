@@ -1,0 +1,139 @@
+v22.16.0
+10.9.2
+PASS: 5 API smoke checks
+T-01 PASS
+T-02 PASS
+T-03 PASS {"count":120,"paid":168540,"pending":37570,"refunded":40710,"failed":18}
+T-04 PASS
+
+> cloud-hospital-revenue-dashboard@1.0.0 test
+> node --test ../TESTS/dashboard_logic.test.mjs
+
+TAP version 13
+# Subtest: T-05 Paid amount
+ok 1 - T-05 Paid amount
+  ---
+  duration_ms: 0.941936
+  type: 'test'
+  ...
+# Subtest: T-06 Pending amount
+ok 2 - T-06 Pending amount
+  ---
+  duration_ms: 0.139319
+  type: 'test'
+  ...
+# Subtest: T-07 Refunded amount
+ok 3 - T-07 Refunded amount
+  ---
+  duration_ms: 0.066129
+  type: 'test'
+  ...
+# Subtest: T-08 count
+ok 4 - T-08 count
+  ---
+  duration_ms: 0.1261
+  type: 'test'
+  ...
+# Subtest: T-11 case-insensitive trimmed ID
+ok 5 - T-11 case-insensitive trimmed ID
+  ---
+  duration_ms: 0.73149
+  type: 'test'
+  ...
+# Subtest: T-12 case-insensitive department
+ok 6 - T-12 case-insensitive department
+  ---
+  duration_ms: 0.997509
+  type: 'test'
+  ...
+# Subtest: T-13 Paid status and combined filter
+ok 7 - T-13 Paid status and combined filter
+  ---
+  duration_ms: 0.24616
+  type: 'test'
+  ...
+# Subtest: T-14 no matching records (logic)
+ok 8 - T-14 no matching records (logic)
+  ---
+  duration_ms: 0.103977
+  type: 'test'
+  ...
+# Subtest: T-15 date asc
+ok 9 - T-15 date asc
+  ---
+  duration_ms: 0.393181
+  type: 'test'
+  ...
+# Subtest: T-16 date desc
+ok 10 - T-16 date desc
+  ---
+  duration_ms: 0.362515
+  type: 'test'
+  ...
+# Subtest: T-17 amount asc
+ok 11 - T-17 amount asc
+  ---
+  duration_ms: 0.236957
+  type: 'test'
+  ...
+# Subtest: T-17 amount desc
+ok 12 - T-17 amount desc
+  ---
+  duration_ms: 0.747774
+  type: 'test'
+  ...
+# Subtest: T-18 status asc
+ok 13 - T-18 status asc
+  ---
+  duration_ms: 0.406612
+  type: 'test'
+  ...
+# Subtest: T-18 status desc
+ok 14 - T-18 status desc
+  ---
+  duration_ms: 0.167271
+  type: 'test'
+  ...
+# Subtest: T-19 immutable fetched data
+ok 15 - T-19 immutable fetched data
+  ---
+  duration_ms: 0.233611
+  type: 'test'
+  ...
+# Subtest: Indian currency formatting
+ok 16 - Indian currency formatting
+  ---
+  duration_ms: 0.326831
+  type: 'test'
+  ...
+# Subtest: Response validation
+ok 17 - Response validation
+  ---
+  duration_ms: 0.171608
+  type: 'test'
+  ...
+# Subtest: Empty fixture metrics
+ok 18 - Empty fixture metrics
+  ---
+  duration_ms: 0.070355
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 90.306214
+Source JSX/JS syntax transpilation: 6 files PASS (not Vite build)
+
+Dependency install attempt: npm install --fetch-retries=0 --fetch-timeout=8000 --no-audit --no-fund
+npm error code EAI_AGAIN
+npm error syscall getaddrinfo
+npm error errno EAI_AGAIN
+npm error request to https://registry.npmjs.org/@vitejs%2fplugin-react failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org
+npm error A complete log of this run can be found in: /home/oai/.npm/_logs/2026-11-25T14_57_42_544Z-debug-0.log
+
+Browser QA Python syntax check: PASS; browser tests NOT RUN.

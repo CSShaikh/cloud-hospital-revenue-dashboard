@@ -1,0 +1,23 @@
+Navigation smooth-scroll patch — 2026-11-25
+Changes: native smooth fragment scrolling, sticky desktop/mobile navigation,
+measured mobile navigation offset, active link sync with URL hash/history,
+reduced-motion support and short color-only link transitions. Overview returns
+near the top (at normal viewport sizes, scrollY=0). Existing single-page
+layout, data/API, controls, and reports informational section unchanged.
+
+Verification performed in this environment:
+- Dashboard.jsx transpile syntax check: PASS.
+- Existing logic tests: 18/18 PASS.
+- Chromium static layout fixture using the actual updated CSS: PASS at 1000,
+  390 and 320px. Intermediate scroll positions, sticky menu, section visibility,
+  return to top, horizontal overflow and reduced-motion override checked.
+- Updated browser_qa.py Python syntax: PASS.
+- Full React/Vite build and real-app browser QA: NOT RUN; required npm packages
+  not present in offline cache. Static fixture is not an end-to-end React test.
+
+Apply the update-only archive at the project root, replacing matching files.
+No dependency changes. Restart npm run dev if necessary, then hard-refresh.
+Run npm test and npm run build from INPUT_FILES/STARTER. With dev, API and
+production preview running, run python ../../VERIFICATION/browser_qa.py to
+check the real app including EXTRA-NAVIGATION. Check all three menu links on
+both desktop and mobile; Back/Forward must synchronize active link.

@@ -1,0 +1,29 @@
+Case_ID,Area,Test_Scenario,Expected_Result,Actual_Result,Status,Environment,Evidence
+T-01,API,GET /api/health,200 and ok,HTTP 200 and {status:ok},PASS,Node.js 22.16.0; Linux,TEST_LOG.txt
+T-02,API,GET /api/transactions,120 records,HTTP 200; 120 records; 120 unique IDs,PASS,Node.js 22.16.0; Linux,TEST_LOG.txt
+T-03,API,GET /api/summary,Totals reconcile,Paid 168540; pending 37570; refunded 40710; count 120; failed count reconciles,PASS,Node.js 22.16.0; Linux,TEST_LOG.txt
+T-04,API,Unknown endpoint,404 JSON,HTTP 404 and JSON error:not_found,PASS,Node.js 22.16.0; Linux,TEST_LOG.txt
+T-05,KPI,Paid total,Sum Paid only,Rendered KPI reconciles with supplied fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-06,KPI,Pending total,Sum Pending only,Rendered KPI reconciles with supplied fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-07,KPI,Refunds,Sum Refunded only,Rendered KPI reconciles with supplied fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-08,KPI,Transaction count,All 120,Rendered KPI reconciles with supplied fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-09,State,API loading,Loading message,Loading text visible while API request held; data appears after release,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-10,State,API error,Recoverable message,HTTP 503 displays recoverable error; retry restores rows,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-11,Search,Transaction ID,Case-insensitive,Trimmed lowercase ID matches exactly,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-12,Search,Department,Case-insensitive,Trimmed uppercase department matches,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-13,Filter,Paid,Only Paid,Paid filter shows only Paid,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-14,Filter,No results,Empty state,Empty state and clear filters work,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-15,Sort,Date ascending,Chronological,date order matches independently sorted fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-16,Sort,Date descending,Reverse chronological,date order matches independently sorted fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-17,Sort,Amount,Numeric ascending/descending,amount order matches independently sorted fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-18,Sort,Status,Consistent sorting,status order matches independently sorted fixture,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-19,Stability,Source immutability,No mutation,Frozen input remained unchanged,PASS,Node.js 22.16.0; Linux,TEST_LOG.txt
+T-20,A11y,Keyboard focus,Visible focus states,First keyboard focus has nonzero visible outline,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-21,A11y,Table labels,Proper headers and scope,Six scoped column headers and labelled controls,PASS,Google Chrome 158.0.8127.89; local Vite dev,BROWSER_TEST_LOG.txt
+T-22,Responsive,320px viewport,No page overflow,320px: no horizontal page overflow; heading/table visible,PASS,Google Chrome 158.0.8127.89; local Vite dev,Screenshots/Dashboard_320.png
+T-23,Responsive,390px viewport,No page overflow,390px: no horizontal page overflow; heading/table visible,PASS,Google Chrome 158.0.8127.89; local Vite dev,Screenshots/Dashboard_390.png
+T-24,Responsive,768px viewport,Usable tablet,768px: no horizontal page overflow; heading/table visible,PASS,Google Chrome 158.0.8127.89; local Vite dev,Screenshots/Dashboard_768.png
+T-25,Responsive,1200px viewport,Usable desktop,1200px: no horizontal page overflow; heading/table visible,PASS,Google Chrome 158.0.8127.89; local Vite dev,Screenshots/Dashboard_1200.png
+T-26,Responsive,1440px viewport,Matches reference,1440px: no horizontal page overflow; heading/table visible; visual reference review still required,PARTIAL,Google Chrome 158.0.8127.89; local Vite dev,Screenshots/Dashboard_1440.png
+T-27,Build,npm run build,Succeeds,Production build exited successfully,PASS,Windows; Node v24.20.0; npm 11.19.0,LOCAL_COMMAND_RESULTS.txt
+T-28,Browser,Chrome/Firefox,No console error,AssertionError: Chrome/Chromium console errors: ['Failed to load resource: the server responded with a status of 404 (Not Found)'],FAIL,Google Chrome 158.0.8127.89; local Vite dev; Playwright Firefox,BROWSER_TEST_LOG.txt

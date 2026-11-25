@@ -1,0 +1,26 @@
+CLOUD HOSPITAL INDIA | REVENUE OPERATIONS DASHBOARD
+Job ID: iXsjsoj8JoeVOhWxt5yq
+Confirmed compensation: INR 990 | Deadline: 26 November 2026 | Duration: 1 business day
+
+OBJECTIVE
+Complete the supplied React dashboard with four metric cards and sortable/filterable transactions from the local read-only API.
+
+SOURCE FILES
+- INPUT_FILES/DASHBOARD_SPECIFICATION.md — UI, behavior, metric, and theme rules
+- INPUT_FILES/DESIGN_REFERENCES/desktop_1440.png and mobile_390.png (SVG equivalents also supplied)
+- INPUT_FILES/BRAND_ASSETS/logo.png and logo.svg
+- INPUT_FILES/DATA/transactions.csv, transactions.json, DATA_DICTIONARY.csv — 120 populated billing transactions
+- INPUT_FILES/STARTER/ — React/Vite starter plus running local API, README and CSS Modules
+- INPUT_FILES/TESTS/ACCEPTANCE_TEST_MATRIX.csv and api_smoke_test.cjs
+
+WORK STEPS
+1. Read the specification and inspect both design references and the 120-record fixture.
+2. Open a terminal in INPUT_FILES/STARTER; run npm install and npm run api. In a second terminal run npm run dev. Check /api/health, /api/transactions and /api/summary.
+3. Complete reusable metric cards with dynamic values calculated from API data, loading/error states and documented props.
+4. Complete the transaction table: search, status filter, date/amount/status sort, result count and empty states. Use hooks and memoized derived data.
+5. Match the desktop/mobile references with CSS Modules, shared design tokens and WCAG 2.1-aware labels/focus states. Test 320, 390, 768, 1200 and 1440px.
+6. Run genuine local tests, npm run build, browser checks and complete the acceptance-test CSV without inventing outcomes.
+7. Publish completed source to GitHub and a working hosted preview to Vercel/Netlify; deliver links, updated README, test log and completion note in one authorized Google Drive folder with Reviewer Viewer access.
+
+ACCEPTANCE
+No hardcoded metric totals; no unnecessary dependencies; correct empty-result and error handling; functional sort/filter; modular component architecture; accessible table headers and controls; no page overflow. Backend uses constructed billing records and must not be presented as production hospital data.

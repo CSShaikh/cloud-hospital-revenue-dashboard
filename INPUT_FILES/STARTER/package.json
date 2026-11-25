@@ -1,0 +1,21 @@
+{
+  "name": "cloud-hospital-revenue-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "api": "node server/server.cjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test ../TESTS/dashboard_logic.test.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.14",
+    "@vitejs/plugin-react": "^4.3.4"
+  }
+}

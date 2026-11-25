@@ -1,0 +1,21 @@
+name: Verify dashboard
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: INPUT_FILES/STARTER
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: |
+          npm run api > /tmp/hospital-api.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:4317/api/health && break; sleep 1; done
+          node ../TESTS/api_smoke_test.cjs
+          node ../TESTS/api_reconciliation.cjs
+      - run: npm run build

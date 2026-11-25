@@ -1,0 +1,13 @@
+Cloud Hospital India | Revenue Operations Dashboard
+Job ID: iXsjsoj8JoeVOhWxt5yq
+
+Implementation: React 18, Vite, reusable KPI cards, dynamic metrics, read-only API, loading/retry, search, status filtering, separate date/amount/status sort controls, pagination, desktop/tablet/mobile styles, production static fixture generation. Original constructed data preserved. Optional trends omitted; Reports is an informational section.
+
+Recorded preparation-environment verification: 5/5 supplied API smoke checks PASS; independent T-01 to T-04 reconciliation PASS; 18/18 data logic tests PASS. See TEST_LOG.txt and acceptance matrix. Browser/visual tests and build are not yet certified because npm dependency installation failed (registry DNS error). Optional browser automation and Windows verification runner are included for actual local verification.
+
+GitHub repository: PENDING — insert actual published URL
+Live HTTPS deployment: PENDING — insert actual verified URL
+Final local/browser test results: PENDING — update from actual logs and screenshots
+Google Drive Reviewer Viewer access: PENDING — confirm authorized access
+
+Known limitations: demo fixture, not a production hospital system; no authentication or financial processing. Production uses read-only static fixture. Visual matching must be reviewed after build. Do not represent pending items as complete.

@@ -1,0 +1,4 @@
+[build]
+  base = "INPUT_FILES/STARTER"
+  command = "npm run build"
+  publish = "dist"

@@ -1,0 +1,150 @@
+Google Chrome 158.0.8127.89; local Vite dev
+T-05 PASS: Rendered KPI reconciles with supplied fixture
+T-06 PASS: Rendered KPI reconciles with supplied fixture
+T-07 PASS: Rendered KPI reconciles with supplied fixture
+T-08 PASS: Rendered KPI reconciles with supplied fixture
+T-22 PASS: 320px: no horizontal page overflow; heading/table visible
+T-23 PASS: 390px: no horizontal page overflow; heading/table visible
+T-24 PASS: 768px: no horizontal page overflow; heading/table visible
+T-25 PASS: 1200px: no horizontal page overflow; heading/table visible
+T-26 PASS: 1440px: no horizontal page overflow; heading/table visible; visual reference review still required
+T-11 PASS: Trimmed lowercase ID matches exactly
+T-12 PASS: Trimmed uppercase department matches
+T-13 PASS: Paid filter shows only Paid
+T-14 PASS: Empty state and clear filters work
+T-15 PASS: date order matches independently sorted fixture
+T-16 PASS: date order matches independently sorted fixture
+T-17 PASS: amount order matches independently sorted fixture
+T-18 PASS: status order matches independently sorted fixture
+T-21 PASS: Six scoped column headers and labelled controls
+T-20 PASS: First keyboard focus has nonzero visible outline
+EXTRA-PAGINATION PASS: Next/previous controls verified
+Traceback (most recent call last):
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 22, in record
+    fn(); status='PASS'; actual=detail
+    ~~^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 118, in navigation
+    assert_true(samples[-1]>10 and any(1 < y < samples[-1]-1 for y in samples),'No intermediate scrolling frames')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 30, in assert_true
+    if not condition: raise AssertionError(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No intermediate scrolling frames
+
+EXTRA-NAVIGATION FAIL: AssertionError: No intermediate scrolling frames
+Traceback (most recent call last):
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 22, in record
+    fn(); status='PASS'; actual=detail
+    ~~^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 127, in preview
+    ready(page,PREVIEW); assert_true(len(ids(page))==5,'Preview fixture did not render'); expect(page.get_by_text(re.compile('Source: supplied static JSON fixture'))).to_be_visible()
+    ~~~~~^^^^^^^^^^^^^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 33, in ready
+    page.goto(url,wait_until='domcontentloaded'); expect(page.get_by_role('table',name='Billing transactions')).to_be_visible(timeout=15000)
+                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "G:\Internship\Python\Lib\site-packages\playwright\sync_api\_generated.py", line 14844, in to_be_visible
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.to_be_visible(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            timeout=to_milliseconds(timeout), visible=visible
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "G:\Internship\Python\Lib\site-packages\playwright\_impl\_sync_base.py", line 124, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "G:\Internship\Python\Lib\site-packages\playwright\_impl\assertions.py", line 869, in to_be_visible
+    await self._expect_impl(
+    ...<5 lines>...
+    )
+  File "G:\Internship\Python\Lib\site-packages\playwright\_impl\assertions.py", line 122, in _expect_impl
+    _record_soft_or_raise(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        AssertionError(
+        ^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        self._is_soft,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "G:\Internship\Python\Lib\site-packages\playwright\_impl\_assertions.py", line 50, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to be visible
+Actual value: None
+Error: element(s) not found 
+Call log:
+  - Expect "to_be_visible" get_by_role("table", name="Billing transactions") with timeout 15000ms
+  - waiting for get_by_role("table", name="Billing transactions")
+
+Aria snapshot:
+- link "Skip to dashboard":
+  - /url: "#main-content"
+- complementary "Primary navigation":
+  - img "Cloud Hospital India — Revenue Operations"
+  - navigation "Dashboard sections":
+    - link "Overview":
+      - /url: "#overview"
+    - link "Transactions":
+      - /url: "#transactions"
+    - link "Reports":
+      - /url: "#reports"
+- main:
+  - heading "Revenue Operations" [level=1]
+  - paragraph: Billing overview & transaction activity
+  - region "Revenue metrics":
+    - article:
+      - heading "Collected Revenue" [level=2]
+      - text: —
+      - paragraph: Data unavailable
+    - article:
+      - heading "Outstanding" [level=2]
+      - text: —
+      - paragraph: Data unavailable
+    - article:
+      - heading "Transaction Count" [level=2]
+      - text: —
+      - paragraph: Data unavailable
+    - article:
+      - heading "Refund Total" [level=2]
+      - text: —
+      - paragraph: Data unavailable
+  - region "Transaction log":
+    - heading "Transaction log" [level=2]
+    - alert:
+      - strong: Unable to load transactions.
+      - paragraph: Check the data connection and try again.
+    - button "Retry"
+  - strong: Reporting information
+  - paragraph: "Constructed billing records for demonstration only. Not live hospital performance. Source: supplied static JSON fixture. KPI totals include all records, independent of transaction filters."
+
+EXTRA-PREVIEW FAIL: AssertionError: Locator expected to be visible
+Actual value: None
+Error: element(s) not found 
+Call log:
+  - Expect "to_be_visible" get_by_role("table", name="Billing transactions") with timeout 15000ms
+  - waiting for get_by_role("table", name="Billing transactions")
+
+Aria snapshot:
+- link "Skip to dashboard":
+  - /url: "#main-content"
+- complementary "Primary navigation":
+  - img "Cloud Hospital India — Revenue Operations"
+  - navigation "Dashb
+T-09 PASS: Loading text visible while API request held; data appears after release
+T-10 PASS: HTTP 503 displays recoverable error; retry restores rows
+Traceback (most recent call last):
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 22, in record
+    fn(); status='PASS'; actual=detail
+    ~~^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 140, in cross_browser
+    assert_true(not errors,'Chrome/Chromium console errors: '+str(errors)); assert_true(name=='Google Chrome','Installed Google Chrome not available (Chromium checked instead)')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Freelancing\Projects\Hospital_Dashboard\VERIFICATION\browser_qa.py", line 30, in assert_true
+    if not condition: raise AssertionError(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Chrome/Chromium console errors: ['Failed to load resource: the server responded with a status of 404 (Not Found)']
+
+T-28 FAIL: AssertionError: Chrome/Chromium console errors: ['Failed to load resource: the server responded with a status of 404 (Not Found)']

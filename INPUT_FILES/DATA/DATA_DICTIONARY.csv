@@ -1,0 +1,11 @@
+field,type,rule
+transaction_id,string,Unique TXN-0001..TXN-0120
+date,YYYY-MM-DD,ISO date
+department,string,Approved service category
+service_code,string,Service reference
+units,integer,Positive quantity
+amount_inr,integer,Gross amount INR
+status,enum,Paid/Pending/Refunded/Failed
+channel,enum,UPI/Card/Cash/Bank Transfer
+invoice_ref,string,Non-identifying invoice reference
+account_ref,string,Internal constructed account reference; do not show on screen

@@ -1,0 +1,8 @@
+FINAL OUTPUTS — keep in one Google Drive folder shared as Viewer with the authorized reviewer
+[ ] GitHub repository URL containing full React source, CSS modules and README (no node_modules/dist)
+[ ] Live HTTPS deployment URL for the finished dashboard (document whether fixture JSON or hosted read-only API is used)
+[ ] README.md describing setup, component props, state handling, sorting/filtering and deployment
+[ ] Completed ACCEPTANCE_TEST_MATRIX.csv with actual outcomes, environment and evidence paths
+[ ] Screenshots at 390px and 1440px, and any supported browser test evidence
+[ ] COMPLETION_NOTE.txt with repository URL, deployment URL, test summary and known limitations
+Do not include account credentials or patient information. Do not claim external tests without genuine evidence.
